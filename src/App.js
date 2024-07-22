@@ -1,6 +1,7 @@
 import './App.css';
 import WhyChooseUs from './components/chooseUs';
 import ContactForm from './components/contactUs';
+import Footer from './components/Footer';
 import Training from './components/homesections/Exam';
 import NewCareers from './components/homesections/newCareers';
 import HomeDetails from './components/homesections/welcomeSection';
@@ -20,8 +21,9 @@ function App() {
     </div>
     <WhyChooseUs/>
     <Testimonials/>
-    {/* <ContactForm/> */}
-
+    <div className=' bg-white relative -top-16  rounded-[4rem]  text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
+    <ContactForm/></div>
+    <Footer/>
     </>
   );
 }
