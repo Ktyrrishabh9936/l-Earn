@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import WhyChooseUs from './components/chooseUs';
+import ContactForm from './components/contactUs';
+import Training from './components/homesections/Exam';
+import NewCareers from './components/homesections/newCareers';
+import HomeDetails from './components/homesections/welcomeSection';
+import MainSection from './components/MainheaderSecton';
+import Navbar from './components/navigation';
+import Testimonials from './components/testimonials';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Navbar/>
+    <MainSection/>
+    <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
+    <HomeDetails/>
+    <NewCareers/>
+    <Training/>
     </div>
+    <WhyChooseUs/>
+    <Testimonials/>
+    {/* <ContactForm/> */}
+
+    </>
   );
 }
 
