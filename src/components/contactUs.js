@@ -2,10 +2,10 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center container ">
-        <h2 className=" text-[clamp(2rem,2.5vw,3rem)] font-semibold mb-6 text-center">Let’s Get Connected</h2>
-        <p className="mb-6 text-center text-xl">If You Have Any Query, Please Contact Us</p>
-      <div className=" p-8 rounded-lg  w-full flex flex-col lg:flex-row">
+    <div className=" flex flex-col items-center justify-center container ">
+        <h2 className=" text-[clamp(2rem,2.5vw,3rem)] font-semibold mb-6 text-center px-6">Let’s Get Connected</h2>
+        <p className="mb-6 text-center text-xl px-6">If You Have Any Query, Please Contact Us</p>
+      <div className=" p-8 rounded-lg  w-full flex flex-col-reverse lg:flex-row gap-8">
         <form className='w-full lg:w-[60%] pb-8'>
           <div className="flex gap-6">
           <div className="mb-4 w-full">
@@ -53,9 +53,9 @@ const ContactForm = () => {
               rows="4"
             ></textarea>
           </div>
-          <div className="text-center">
+          <div className=" text-lg ">
             <button
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-yellow-500 hover:bg-yellow-600  font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-xl"
               type="submit"
             >
               Submit

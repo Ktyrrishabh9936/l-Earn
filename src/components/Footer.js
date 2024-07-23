@@ -5,18 +5,18 @@ import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className=' bg-black p-8 flex flex-col md:flex-row text-gray-500 space-x-8'>
-      <div className=" w-full md:w-[60%] space-y-9 ">
-      <div className="flex items-center gap-1 text-clamp-h4 ">
+    <footer className=' bg-black p-8 flex flex-col md:flex-row text-gray-500 gap-7'>
+      <div className=" w-min md:w-[60%] space-y-9 mx-auto">
+      <div className="flex items-center gap-1 text-clamp-h4 mx-auto ">
           <p className=''>
           <AiFillMessage color='yellow' fontSize={50}/>
           </p>
-          <div className=" font-Teko  text-white text-2xl leading-6">
+          <div className=" font-Teko  text-white text-2xl leading-6 ">
                 <p>L-Earn</p>
                 <p>Academy</p>
           </div>
         </div>
-        <ul className=' list-none flex gap-4'>
+        <ul className=' list-none flex gap-4 mx-auto'>
                 <li className=""><BiLogoFacebook fontSize={30}/></li>
                 <li className=""><FaLinkedinIn fontSize={30}/></li>
                 <li className=""><FaYoutube fontSize={30}/></li>
