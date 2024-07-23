@@ -14,7 +14,7 @@ const Testimonials = () => {
   return (
     <div className="bg-[rgba(10,10,10,0.9)] text-white pt-20 pb-28 px-8 relative">
       <h2 className="text-3xl font-bold text-center mb-12">Testimonials</h2>
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-9xl font-extrabold text-white opacity-10 ">
+      <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-7xl sm:text-9xl font-extrabold text-white opacity-10 ">
         <p className="">Our </p>
         <p>Results</p>
       </div>
