@@ -5,8 +5,8 @@ export default function NewCareers() {
         const theme = 'blue';
   return (
     
-      <section className="container space-y-6 px-6">
-        <h3 className=' text-[clamp(2rem,2.5vw,3rem)] font-semibold'>New Language, New Career</h3>
+      <section className="container space-y-6 px-6 sm:px-0 font-ChakraPetch">
+        <h3 className=' text-[clamp(1.6rem,2.3vw,2.5rem)] font-semibold font-Salsa'>New Language, New Career</h3>
         <p className='text-xl'>Choose The Right Foreign Language</p>
         <div className="w-full  overflow-x-scroll ">
         <div className="flex gap-5  mx-auto w-min">

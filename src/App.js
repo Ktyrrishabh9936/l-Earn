@@ -1,30 +1,15 @@
 import './App.css';
-import WhyChooseUs from './components/chooseUs';
-import ContactForm from './components/contactUs';
-import Footer from './components/Footer';
-import Training from './components/homesections/Exam';
-import NewCareers from './components/homesections/newCareers';
-import HomeDetails from './components/homesections/welcomeSection';
-import MainSection from './components/MainheaderSecton';
-import Navbar from './components/navigation';
-import Testimonials from './components/testimonials';
-
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import HomePage from './pages/homePage';
+import ScrollMotion from './components/homesections/ScrollAnimate';
 function App() {
   return (
-    <>
-    <Navbar/>
-    <MainSection/>
-    <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
-    <HomeDetails/>
-    <NewCareers/>
-    <Training/>
-    </div>
-    <WhyChooseUs/>
-    <Testimonials/>
-    <div className=' bg-white relative -top-16  rounded-[4rem]  text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
-    <ContactForm/></div>
-    <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/scroll' element={<ScrollMotion/>}/>
+      </Routes>
+    </Router>
   );
 }
 

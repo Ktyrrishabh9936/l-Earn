@@ -5,13 +5,14 @@ import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className=' bg-black p-8 flex flex-col md:flex-row text-gray-500 gap-7'>
+    <footer className=' bg-black py-8  text-gray-500 '>
+      <div className="container mx-auto flex flex-col md:flex-row ">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
       <div className="flex items-center gap-1 text-clamp-h4 mx-auto ">
           <p className=''>
           <AiFillMessage color='yellow' fontSize={50}/>
           </p>
-          <div className=" font-Teko  text-white text-2xl leading-6 ">
+          <div className=" font-ChakraPetch  text-white text-2xl leading-6 ">
                 <p>L-Earn</p>
                 <p>Academy</p>
           </div>
@@ -23,7 +24,7 @@ export default function Footer() {
                 <li className=""><FaInstagram fontSize={30}/></li>
         </ul>
       </div>
-      <div className=" w-full md:w-[40%] flex justify-evenly py-5">
+      <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-between py-5">
       <ul className=' list-none flex flex-col gap-4'>
                 <li className=' font-bold'>Home</li>
                 <li>About Us </li>
@@ -36,6 +37,7 @@ export default function Footer() {
                 <li>Privacy Policy </li>
                 <li>Legal Policy</li>
         </ul>
+        </div>
       </div>
     </footer>
   )
