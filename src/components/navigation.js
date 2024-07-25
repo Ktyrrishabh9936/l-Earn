@@ -3,9 +3,7 @@ import { AiFillMessage } from 'react-icons/ai';
 import { BsThreeDots } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
 import { MdMenuOpen } from 'react-icons/md';
-import colors from 'tailwindcss/colors'
 export default function Navbar() {
-  const theme = 'blue';
   const [isOpen,setisOpen] = useState(false);
   const navlinks = ['Home','Languages Courses','About Us','Contact Us'];
     function toggleSideBar(){
@@ -14,7 +12,8 @@ export default function Navbar() {
 
       
   return (
-    <div className='flex   w-[100vw] justify-between py-6 whitespace-nowrap shadow-xl shadow-slate-400 px-4 md:px-7 xl:px-9 font-Poppins' style={{backgroundColor:colors[theme][800]}}>
+    <div className='w-[100vw]  py-6 whitespace-nowrap  font-Poppins' style={{backgroundColor:'rgba(29,13,207,1)'}}>
+      <div className="container mx-auto flex justify-between">
       <div className=" flex px-2 gap-7  justify-between  ">
         <p className='flex'>
       
@@ -31,11 +30,11 @@ export default function Navbar() {
         </div>
 
 
-      <div className="  flex my-auto gap-4  justify-around flex-wrap ">
+      <div className="  flex my-auto gap-x-10  justify-around flex-wrap ">
       <div className="block md:hidden" onClick={toggleSideBar}>
         <MdMenuOpen
           style={{
-            backgroundColor: colors[theme][900],
+            backgroundColor:'rgba(29,13,207,1)',
             color: "white",
             fontSize: "40px",
             padding: "4px",
@@ -88,6 +87,7 @@ export default function Navbar() {
           return <li className='py-4'>{navlink}</li>
           })}
         </ul>
+      </div>
       </div>
     </div>
   )

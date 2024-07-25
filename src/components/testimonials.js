@@ -12,7 +12,8 @@ const Testimonials = () => {
     autoplay:true,
   }
   return (
-    <div className="bg-[rgba(10,10,10,0.9)] text-white pt-20 pb-28 px-8 relative font-ChakraPetch">
+    <div className="bg-[rgba(10,10,10,0.9)] text-white pt-20 pb-28 px-8  relative font-ChakraPetch">
+      <div className="py-20">
       <h2 className="text-3xl font-bold text-center mb-12 text-[clamp(1.6rem,2.3vw,2.5rem)] font-Salsa">Testimonials</h2>
       <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-7xl sm:text-9xl font-extrabold text-white opacity-10 ">
         <p className="">Our </p>
@@ -86,6 +87,7 @@ const Testimonials = () => {
           </div>
         </div>
         </Slider>
+    </div>
     </div>
   );
 };

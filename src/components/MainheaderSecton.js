@@ -1,21 +1,19 @@
 import React from 'react'
 import { PiTranslateBold } from 'react-icons/pi';
-import colors from 'tailwindcss/colors'
 
 export default function MainSection() {
-        const theme = 'blue';
   return (
-    <div className='h-[80vh] flex justify-center items-center' style={{backgroundColor:colors[theme][800]}}>
-      <div className=" text-6xl sm:text-[clamp(5rem,8vw,9rem)] font-extrabold  text-center font-Inter leading-[4rem] md:leading-[5rem] xl:leading-[8rem] text-white relative mb-24">
-      <div className="rounded-md bg-[rgba(255,255,255,0.5)] absolute -bottom-28 -left-9 px-6 pt-6 pb-10 -rotate-12 z-20"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" className='rounded-full h-16 w-16' alt="" /></div>
-      <div className="rounded-md bg-[rgba(255,255,255,0.5)] absolute -top-16 sm:top-8 right-10 px-4 pt-4 pb-8 rotate-12 z-0 "><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" className='rounded-full h-12 w-12' alt="" /></div>
-        <div className=' relative flex flex-col  '>
+    <div className='min-h-[80vh] flex justify-center items-center pb-28' style={{backgroundColor:'rgba(29,13,207,1)'}}>
+      <div className=" text-6xl sm:text-[clamp(5rem,8vw,9rem)] font-extrabold  text-center font-Inter leading-[4rem] md:leading-[5rem] xl:leading-[8rem] text-white relative ">
+      <div className="rounded-md  backdrop-blur-sm bg-[rgba(255,255,255,0.5)]  absolute -bottom-28 left-16 px-6 pt-6 pb-10 -rotate-[30deg] z-10"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" className='rounded-full h-16 w-16' alt="" /></div>
+      <div className="rounded-md bg-[rgba(255,255,255,0.5)] absolute -top-16 sm:-top-16 xl:top-24 right-12 xl:right-36 px-4 pt-4 pb-8 rotate-[28deg] z-10 backdrop-blur-sm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" className='rounded-full h-12 w-12' alt="" /></div>
+        <div className=' relative flex flex-col z-0 '>
         <span>Master</span>
         <span>New</span>
         <span>Languages</span>
         </div>
-          <img className='h-[clamp(10rem,13vw,14rem)] absolute -top-7 -right-3 md:-right-0' src='svg/arrow.svg'></img>
-          <p className='absolute -top-8 -left-7 lg:left-10 xl:left-16'><PiTranslateBold style={{color:'#F8C045'}} fontSize={100}/></p>
+          <img className='h-[clamp(10rem,13vw,14rem)] absolute -top-8 md:-top-2 xl:top-10 -right-3 md:right-0 xl:right-16' src='svg/arrow.svg'></img>
+          <p className='absolute -top-8 -left-7 lg:left-4 xl:left-16'><PiTranslateBold style={{color:'#F8C045'}} fontSize={100}/></p>
           
           <div className="bg-yellow-500 rounded-full h-24  w-24  mb-4 absolute hidden sm:block -bottom-24 xl:-bottom-16  -right-12"></div>
       </div>
