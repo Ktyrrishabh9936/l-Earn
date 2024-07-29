@@ -6,8 +6,15 @@ import { MdMenuOpen } from 'react-icons/md';
 export default function Navbar() {
   const [isOpen,setisOpen] = useState(false);
   const navlinks = ['Home','Languages Courses','About Us','Contact Us'];
-    function toggleSideBar(){
+    function openSideBar(){
         setisOpen(!isOpen);
+        document.body.style.height = '100vh';
+        document.body.style.overflowY = 'hidden';
+      }
+    function closeSideBar(){
+        setisOpen(!isOpen);
+        document.body.style.height = 'auto';
+        document.body.style.overflowY = 'scroll';
       }
 
       
@@ -31,7 +38,7 @@ export default function Navbar() {
 
 
       <div className="  flex my-auto gap-x-10  justify-around flex-wrap ">
-      <div className="block md:hidden" onClick={toggleSideBar}>
+      <div className="block md:hidden" onClick={openSideBar}>
         <MdMenuOpen
           style={{
             backgroundColor:'rgba(29,13,207,1)',
@@ -72,7 +79,7 @@ export default function Navbar() {
         </div>
         </div>
 
-        <div className="p-3 float-right" onClick={toggleSideBar}>
+        <div className="p-3 float-right" onClick={closeSideBar}>
           <IoMdClose  style={{
             backgroundColor: "black",
             color: "white",
@@ -82,10 +89,11 @@ export default function Navbar() {
           }}/>
         </div>
         </div>
-        <ul className="flex py-2  text-gray-500 flex-col  text-xl text-center gap-2 mt-7">
+        <ul className="flex py-2  text-gray-500 flex-col  text-xl text-center gap-2 mt-7 ">
           {navlinks.map((navlink) => {
           return <li className='py-4'>{navlink}</li>
           })}
+       <li className='px-4 py-2 rounded-full bg-yellow-500 font-semibold h-min'>Apply Now</li>
         </ul>
       </div>
       </div>
