@@ -1,9 +1,41 @@
 import React from 'react'
 import { FaLanguage } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function NewCareers() {
         const theme = 'blue';
         const navigate = useNavigate();
+        const languages=[
+          {
+            name:'dutch',
+            imagename:'Dutch.svg',
+            title:"Dutch (Netherlands)",
+            description:"Dutch is a West Germanic language, spoken by about 25 million people as a first language.",
+          },
+          {
+            name:'spanish.svg',
+            imagename:'spanish.svg',
+            title:"Spanish (Spain)",
+            description:"Spanish is the world's second-most spoken native language the world's fourth-most spoken language",
+          },
+          {
+            name:'english',
+            imagename:'england.svg',
+            title:"English (England)",
+            description:"English is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England",
+          },
+          {
+            name:'japanese',
+            imagename:'japan.svg',
+            title:"Japanese (Japan)",
+            description:"Japanese is the principal language of the Japonic language family spoken by the Japanese people. It has around 120 million speakers, primarily in Japan, .",
+          },
+          {
+            name:'chinese',
+            imagename:'chineese.svg',
+            title:"Chinese (China)",
+            description:"Japanese is the principal language of the Japonic language family spoken by the Japanese people. It has around 120 million speakers, primarily in Japan, .",
+          },
+        ]
   return (
     
       <section className="container space-y-6 px-6 sm:px-0 font-ChakraPetch">
@@ -25,17 +57,17 @@ export default function NewCareers() {
 
 <div className="py-10  flex justify-center items-center text-left">
       <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
-        {[...Array(4)].map((_, i) => (
+        {languages.map((lang, i) => (
           <div key={i} className="flex items-center p-4 bg-white shadow-lg rounded-lg relative group">
                  <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-[opacity] duration-300 w-full h-full bg-[#2c496499]  flex space-x-4 z-2 text-white flex-col gap-2 justify-center items-center " >
-                 <button onClick={()=>navigate('/languages')} className='px-4 py-2 rounded-md  border-2 border-white text-white font-semibold h-min w-max '>Read More</button>
+                 <Link to={`/learn/${lang.name}`}  className='px-4 py-2 rounded-md  border-2 border-white text-white font-semibold h-min w-max '>Read More</Link>
                         </div>
-            <div className="p-3 rounded-full bg-gray-200 text-gray-800">
-              <FaLanguage size={24} />
+            <div className=" h-auto rounded-full bg-gray-200 text-gray-800">
+              <img src={`/svg/${lang.imagename}`} alt="" className='max-w-[84px] rounded-md'  />
             </div>
             <div className="ml-4">
-              <h2 className="text-lg font-semibold">Dutch (Netherlands)</h2>
-              <p>Dutch is a West Germanic language, spoken by about 25 million people as a first language.</p>
+              <h2 className="text-lg font-semibold">{lang.title}</h2>
+              <p className=' line-clamp-2'>{lang.description}</p>
             </div>
           </div>
         ))}

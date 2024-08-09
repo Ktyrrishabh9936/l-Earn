@@ -1,21 +1,16 @@
 import React from 'react'
-import { AiFillMessage } from 'react-icons/ai';
 import { BiLogoFacebook } from 'react-icons/bi';
 import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <footer className=' bg-black py-8  text-gray-500 '>
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row ">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
-      <div className="flex items-center gap-1 text-clamp-h4 mx-auto ">
-          <p className=''>
-          <AiFillMessage color='yellow' fontSize={50}/>
-          </p>
-          <div className=" font-ChakraPetch  text-white text-2xl leading-6 ">
-                <p>L-Earn</p>
-                <p>Academy</p>
-          </div>
+      <div className="flex items-center gap-1 " onClick={()=>navigate('/')}>
+          <img src="/img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16'/>
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
                 <li className=""><BiLogoFacebook fontSize={30}/></li>

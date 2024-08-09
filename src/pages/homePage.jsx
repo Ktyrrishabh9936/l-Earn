@@ -8,13 +8,28 @@ import MainSection from '../components/MainheaderSecton';
 import Navbar from '../components/navigation';
 import Testimonials from '../components/testimonials';
 import { Toaster } from 'react-hot-toast';
-
+import React, {  useEffect, useState } from 'react'
 function HomePage() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
     
-    <Navbar/>
+    <Navbar isScrolled={isScrolled}/>
     <Toaster position='top-center' reverseOrder={false}/>
     <MainSection/>
     <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-20 '>

@@ -22,7 +22,7 @@ const Testimonials = () => {
       <Slider {...settings} autoplay  responsive={[{breakpoint:600,settings:{slidesToShow:1}},{breakpoint:1024,settings:{slidesToShow:2},}]} >
         <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
           <h3 className="text-xl font-bold mb-2">Marcos Stanley</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
+          <p>"The classes were very interactive and interesting. Sir taught a very hard language very well and it was very easy to understand. "</p>
           <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
             <img
               src="img/testimonials-1.jpg"
@@ -33,7 +33,7 @@ const Testimonials = () => {
         </div>
         <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
           <h3 className="text-xl font-bold mb-2">Aisa Daniel</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
+          <p>He is excellent teacher ..he teaches you from basic grammar ..great, have lots of patience..,flexible 👍 </p>
           <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
             <img
               src="img/testimonials-2.jpg"
@@ -44,7 +44,7 @@ const Testimonials = () => {
         </div>
         <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
           <h3 className="text-xl font-bold mb-2">Rlyan</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
+          <p>It was really nice learning from sir and dutch became much Easier and interesting our class always remained interactive due to sir thank you for all that.</p>
           <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
             <img
               src="img/testimonials-3.jpg"
@@ -53,39 +53,7 @@ const Testimonials = () => {
             />
           </div>
         </div>
-        <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
-          <h3 className="text-xl font-bold mb-2">Marcos Stanley</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
-          <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
-            <img
-              src="img/testimonials-1.jpg"
-              alt="Marcos Stanley"
-              className="rounded-full border-4 border-yellow-500 h-16"
-            />
-          </div>
-        </div>
-        <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
-          <h3 className="text-xl font-bold mb-2">Aisa Daniel</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
-          <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
-            <img
-              src="img/testimonials-2.jpg"
-              alt="Aisa Daniel"
-              className="rounded-full border-4 border-yellow-500 h-16"
-            />
-          </div>
-        </div>
-        <div className="bg-[rgba(255,255,255,0.3)] p-6 rounded-lg shadow-lg text-center relative mb-24">
-          <h3 className="text-xl font-bold mb-2">Rlyan</h3>
-          <p>Exposure to the cultural aspects of language to enhance understanding and appreciation.</p>
-          <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
-            <img
-              src="img/testimonials-3.jpg"
-              alt="Rlyan"
-              className="rounded-full border-4 border-yellow-500 h-16"
-            />
-          </div>
-        </div>
+
         </Slider>
     </div>
     </div>

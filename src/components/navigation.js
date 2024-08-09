@@ -1,27 +1,13 @@
-import React, {  useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { AiFillMessage } from 'react-icons/ai';
-import { BsThreeDots } from 'react-icons/bs';
 import { IoMdClose } from 'react-icons/io';
 import { MdMenuOpen } from 'react-icons/md';
 import JoinConsultation from './homesections/JoinConsultation';
-export default function Navbar() {
+import { useNavigate } from 'react-router-dom';
+export default function Navbar({isScrolled=true}) {
   const [isOpen,setisOpen] = useState(false);
   const navlinks = ['Home','Languages Courses','About Us','Contact Us'];
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const navigate = useNavigate();
 
     function openSideBar(){
         setisOpen(!isOpen);
@@ -43,8 +29,8 @@ export default function Navbar() {
       <div className=" flex px-2 gap-7  justify-between  ">
         <p className='flex'>
       
-        <div className="flex items-center gap-1 ">
-          <img src="img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16'/>
+        <div className="flex  " onClick={()=>navigate('/')}>
+          <img src="/img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16'/>
         </div>
         </p>
         </div>
