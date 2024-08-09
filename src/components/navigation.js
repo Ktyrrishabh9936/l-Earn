@@ -49,11 +49,12 @@ export default function Navbar({isScrolled=true}) {
         />
       </div>
       <div className=" md:block hidden my-auto text-sm">
-        <ul className="flex  gap-7 py-2 text-white ">
+      <a href="#contact"><ul className="flex  gap-7 py-2 text-white ">
           {navlinks.map((navlink) => {
           return <li className=' capitalize'>{navlink}</li>
           })}
         </ul>
+        </a>  
       </div>
        <div className='hidden md:block my-auto'> 
         <div className="flex gap-8">

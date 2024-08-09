@@ -31,7 +31,7 @@ const ContactForm = () => {
     emailjs.init(process.env.REACT_APP_EMAILJS_PUBLICKEY);
   },{})
   return (
-    <div className=" flex flex-col items-center justify-center w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] font-ChakraPetch ">
+    <div id='contact' className=" flex flex-col items-center justify-center w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] font-ChakraPetch ">
         <h2 className=" font-semibold mb-6 text-center px-6 text-[clamp(1.6rem,2.3vw,2.5rem)] font-Salsa">Let’s Get Connected</h2>
         <p className="mb-6 text-center text-xl px-6">If You Have Any Query, Please Contact Us</p>
       <div className=" p-8 rounded-lg  w-full flex flex-col-reverse lg:flex-row gap-8">

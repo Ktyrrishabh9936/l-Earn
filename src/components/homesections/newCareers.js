@@ -56,7 +56,7 @@ export default function NewCareers() {
         </div> */}
 
 <div className="py-10  flex justify-center items-center text-left">
-      <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
         {languages.map((lang, i) => (
           <div key={i} className="flex items-center p-4 bg-white shadow-lg rounded-lg relative group">
                  <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-[opacity] duration-300 w-full h-full bg-[#2c496499]  flex space-x-4 z-2 text-white flex-col gap-2 justify-center items-center " >
