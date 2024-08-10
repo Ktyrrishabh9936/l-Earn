@@ -1,9 +1,8 @@
 import React from 'react'
-import { FaLanguage } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import ScrollAnimation from "react-animate-on-scroll";
 export default function NewCareers() {
-        const theme = 'blue';
-        const navigate = useNavigate();
+
         const languages=[
           {
             name:'dutch',
@@ -56,8 +55,10 @@ export default function NewCareers() {
         </div> */}
 
 <div className="py-10  flex justify-center items-center text-left">
-      <div className="grid grid-cols-2sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
         {languages.map((lang, i) => (
+          <div>
+          <ScrollAnimation animateIn="flipInX" duration={2000}>
           <div key={i} className="flex items-center p-4 bg-white shadow-lg rounded-lg relative group">
                  <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-[opacity] duration-300 w-full h-full bg-[#2c496499]  flex space-x-4 z-2 text-white flex-col gap-2 justify-center items-center " >
                  <Link to={`/learn/${lang.name}`}  className='px-4 py-2 rounded-md  border-2 border-white text-white font-semibold h-min w-max '>Read More</Link>
@@ -69,6 +70,8 @@ export default function NewCareers() {
               <h2 className="text-lg font-semibold">{lang.title}</h2>
               <p className=' line-clamp-2'>{lang.description}</p>
             </div>
+          </div>
+          </ScrollAnimation>
           </div>
         ))}
       </div>

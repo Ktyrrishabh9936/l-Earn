@@ -1,14 +1,33 @@
 import React from 'react'
+import styled from 'styled-components';
+export default function LanguagePage({language,height}) {
+  const DynamicHeightDiv = styled.div`
+  position:absolute;
+  background-color: transparent;
+   height: ${(props) => `calc(${props.height}px + 77vh)` || '2300px'};
+  right:0px;
+  top:-6rem;
+  z-index:30;
+  max-width:32rem;
+  width: 50%;
+  @media (max-width: 768px) {
+    height: auto;
+    position:static;
+    width: 100%;
+  }
+`;
 
-export default function LanguagePage({language}) {
   return (
-    <div className='min-h-[90vh] bg-[rgb(29,13,207)]  pb-28 flex justify-center items-center font-Poppins  ' >
-        <div className='w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center my-12 gap-7  '>
-        <div className='  text-white w-full md:w-1/2 whitespace-break-spaces'>
+    <div className=' min-h-[90vh] pt-6 md;pt-28 bg-[rgb(29,13,207)]  pb-36  font-Poppins  ' >
+        <div className='w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center my-12 gap-7 relative  '>
+
+        <div className='  text-white w-full md:w-1/2 whitespace-break-spaces py-6'>
         <h1 className="text-[clamp(2rem,3vw,3rem)] font-bold mb-6 leading-8 md:leading-none font-Inter">Learn <span className=' capitalize'>{language}</span> with <span className=' whitespace-nowrap text-[rgb(234,179,8)]'>L-Earn</span> Academy</h1>
         <p className="mb-6">At L-Earn Academy, we believe that learning {language} opens doors to a rich cultural heritage and new opportunities. Our <span className=' capitalize'>{language}</span> courses are designed to help you improve your language skills quickly and effectively.</p>
         </div>
-        <div className="bg-white text-black max-w-lg mx-auto md:ml-auto p-8 rounded-lg shadow-lg w-full  md:w-1/2 ">
+        <DynamicHeightDiv height={height}>
+        <div className="bg-white text-black mx-auto md:ml-auto p-8 rounded-lg shadow-lg sticky top-36 ">
+
         <form>
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
@@ -32,6 +51,7 @@ export default function LanguagePage({language}) {
           </div>
         </form>
       </div>
+      </DynamicHeightDiv>
     </div>
     </div>
   )

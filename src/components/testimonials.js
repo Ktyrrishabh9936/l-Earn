@@ -12,7 +12,7 @@ const Testimonials = () => {
     autoplay:true,
   }
   return (
-    <div className="bg-[rgba(10,10,10,0.9)] text-white pt-20 pb-28 px-8  relative font-ChakraPetch">
+    <div className="bg-[rgba(10,10,10,0.9)] text-white pt-20 pb-28 px-8  relative font-ChakraPetch" id='testimonials'>
       <div className="py-20">
       <h2 className="text-3xl font-bold text-center mb-12 text-[clamp(1.6rem,2.3vw,2.5rem)] font-Salsa">Testimonials</h2>
       <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-7xl sm:text-9xl font-extrabold text-white opacity-10 ">
@@ -27,7 +27,7 @@ const Testimonials = () => {
             <img
               src="img/testimonials-1.jpg"
               alt="Marcos Stanley"
-              className="rounded-full border-4 border-yellow-500 h-16"
+              className="rounded-full  h-16"
             />
           </div>
         </div>
@@ -38,7 +38,7 @@ const Testimonials = () => {
             <img
               src="img/testimonials-2.jpg"
               alt="Aisa Daniel"
-              className="rounded-full border-4 border-yellow-500 h-16"
+              className="rounded-full  h-16"
             />
           </div>
         </div>
@@ -49,7 +49,7 @@ const Testimonials = () => {
             <img
               src="img/testimonials-3.jpg"
               alt="Rlyan"
-              className="rounded-full border-4 border-yellow-500 h-16"
+              className="rounded-full  h-16"
             />
           </div>
         </div>

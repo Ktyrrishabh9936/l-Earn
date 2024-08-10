@@ -1,7 +1,10 @@
 import React from 'react'
 import { BiLogoFacebook } from 'react-icons/bi';
 import { FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from './ProviderFunctions';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -21,10 +24,10 @@ export default function Footer() {
       </div>
       <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-between py-5">
       <ul className=' list-none flex flex-col gap-4'>
-                <li className=' font-bold'>Home</li>
-                <li>About Us </li>
+      <Link to="/"><li className=' font-bold'>Home</li></Link>
+      <HashLink smooth  to="/#about" scroll={scrollWithOffset}><li>About Us </li></HashLink>
                 <li>Gallary</li>
-                <li>Testimonials</li>
+                <HashLink smooth  to="/#testimonials"> <li>Testimonials</li></HashLink>
         </ul>
       <ul className=' list-none flex flex-col gap-4'>
                 <li className=' font-bold'>Legal</li>

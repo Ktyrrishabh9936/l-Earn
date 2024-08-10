@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CourseInfo = ({language}) => {
+const CourseInfo = ({language,elementRef}) => {
   return (
-    <div className=" w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto font-Poppins">
-      <div className="bg-white max-w-xl  mx-auto md:mx-0 w-full md:w-[40%]  rounded-lg  space-y-6">
+    <div className=" w-[92%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto font-Poppins">
+      <div className="bg-white max-w-xl  mx-auto md:mx-0 w-full md:w-[40%]  rounded-lg  space-y-6" ref={elementRef}>
         <h1 className="text-3xl font-semibold text-gray-900 text-center md:text-left ">Unlock the Door to <span className=' capitalize'>{language}</span> Culture and Opportunities</h1>
         <div className='space-y-6 '>
           <h2 className=" text-gray-800">Why Learn <span className=' capitalize'>{language}</span>?</h2>
@@ -14,7 +14,7 @@ const CourseInfo = ({language}) => {
           </ul>
         </div>
       
-        <div className=''>
+        <div className='px-5'>
         <h1 className="text-3xl  text-gray-900 ">Course Structure:</h1>
           <div className="mt-4  bg-[#EBEBEB]">
             <h3 className="text-xl font-semibold bg-[#1D0DCF] text-white px-4 lg:px-6 py-3">A1 (Beginner)</h3>

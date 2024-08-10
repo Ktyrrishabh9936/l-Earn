@@ -4,7 +4,14 @@ import { IoMdClose } from 'react-icons/io';
 import { MdMenuOpen } from 'react-icons/md';
 import JoinConsultation from './homesections/JoinConsultation';
 import { useNavigate } from 'react-router-dom';
+import Menu from '@mui/joy/Menu';
+import MenuButton from '@mui/joy/MenuButton';
+import MenuItem from '@mui/joy/MenuItem';
+import Dropdown from '@mui/joy/Dropdown';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from './ProviderFunctions';
 export default function Navbar({isScrolled=true}) {
+  
   const [isOpen,setisOpen] = useState(false);
   const navlinks = ['Home','Languages Courses','About Us','Contact Us'];
   const navigate = useNavigate();
@@ -36,7 +43,7 @@ export default function Navbar({isScrolled=true}) {
         </div>
 
 
-      <div className="  flex my-auto gap-x-10  justify-around flex-wrap ">
+      <div className="  flex my-auto gap-x-10 gap-y-4 justify-around flex-wrap-reverse ">
       <div className="block md:hidden" onClick={openSideBar}>
         <MdMenuOpen
           style={{
@@ -49,17 +56,24 @@ export default function Navbar({isScrolled=true}) {
         />
       </div>
       <div className=" md:block hidden my-auto text-sm">
-      <a href="#contact"><ul className="flex  gap-7 py-2 text-white ">
-          {navlinks.map((navlink) => {
-          return <li className=' capitalize'>{navlink}</li>
-          })}
+      <ul className="flex  gap-7 text-white  font-semibold items-center">
+          <li className=' capitalize h-min' onClick={()=>navigate('/')}>Home</li>
+          <li><Dropdown>
+  <MenuButton className=' hover:text-black' sx={{border:'none',color:'white'}}>Languages Courses</MenuButton>
+  <Menu>
+    <MenuItem onClick={()=>navigate('/learn/dutch')}>Dutch</MenuItem>
+    <MenuItem onClick={()=>navigate('/learn/spanish')}>Spanish</MenuItem>
+    <MenuItem onClick={()=>navigate('/learn/english')}>English</MenuItem>
+    <MenuItem onClick={()=>navigate('/learn/japanese')}>Japanese</MenuItem>
+    <MenuItem onClick={()=>navigate('/learn/chinese')}>Chinese</MenuItem>
+  </Menu>
+</Dropdown></li>
+<li className=' capitalize h-min' ><HashLink smooth  to="/#about" scroll={scrollWithOffset}>About Us</HashLink></li>
+<li className=' capitalize h-min'><HashLink smooth  to="/#contact" scroll={scrollWithOffset}>Contact Us</HashLink></li>
         </ul>
-        </a>  
       </div>
-       <div className='hidden md:block my-auto'> 
-        <div className="flex gap-8">
-       <span className='px-4 py-2 rounded-full bg-yellow-500 font-semibold h-min'>Apply Now</span>
-       </div>
+       <div className='hidden md:block my-auto w-max ml-auto text-right'> 
+       <button className='px-4 py-2 rounded-full bg-yellow-500 font-semibold h-min'>Apply Now</button>
         </div>
         </div>
 

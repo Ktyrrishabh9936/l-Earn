@@ -1,8 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import HomePage from './pages/homePage';
-import LanguageDetails from './pages/lanuages';
+
 import ScrollToTop from './components/scrolltotop';
+import HomePage from './pages/homePage';
+import LanguageDetails from './pages/languages';
 function App() {
   return (
     <>
