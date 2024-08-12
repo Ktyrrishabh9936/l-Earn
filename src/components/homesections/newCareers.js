@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link} from 'react-router-dom';
-import ScrollAnimation from "react-animate-on-scroll";
 export default function NewCareers() {
 
         const languages=[
@@ -11,7 +10,7 @@ export default function NewCareers() {
             description:"Dutch is a West Germanic language, spoken by about 25 million people as a first language.",
           },
           {
-            name:'spanish.svg',
+            name:'spanish',
             imagename:'spanish.svg',
             title:"Spanish (Spain)",
             description:"Spanish is the world's second-most spoken native language the world's fourth-most spoken language",

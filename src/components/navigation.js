@@ -67,7 +67,7 @@ export default function Navbar({isScrolled=true}) {
           <li className={`capitalize h-min cursor-pointer hover:text-yellow-200 ${location.pathname === '/'?'text-yellow-600':''}`} onClick={()=>navigate('/')} >Home</li>
           <li className='cursor-pointer hover:text-yellow-200' onMouseLeave={handlecloseDropdown}>
             <Dropdown  >
-  <MenuButton className=' hover:text-black' sx={{border:'none',color:location.pathname.startsWith("/learn")?"#ca8a04":'white',background:'transparent' }} onMouseEnter={handleopenDropdown}  >Languages Courses</MenuButton>
+  <MenuButton className=' hover:text-black font-semibold' sx={{border:'none',color:location.pathname.startsWith("/learn")?"#ca8a04":'white',background:'transparent' }} onMouseEnter={handleopenDropdown}  >Languages Courses</MenuButton>
   <Menu anchorEl={dropDWN} open={Boolean(dropDWN)} onClose={handlecloseDropdown} >
     <MenuItem onClick={()=>navigate('/learn/dutch')}>Dutch</MenuItem>
     <MenuItem onClick={()=>navigate('/learn/spanish')}>Spanish</MenuItem>
