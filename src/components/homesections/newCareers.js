@@ -37,8 +37,8 @@ export default function NewCareers() {
         ]
   return (
     
-      <section className="container space-y-6 px-6 sm:px-0 font-ChakraPetch">
-        <h3 className=' text-[clamp(1.6rem,2.3vw,2.5rem)] font-semibold font-Salsa'>New Language, New Career</h3>
+      <section className="container space-y-6 px-6 sm:px-0 font-Roboto">
+        <h3 className=' text-[clamp(1.6rem,2.3vw,2.5rem)] font-semibold font-RobotoSlab'>New Language, New Career</h3>
         <p className='text-xl'>Choose The Right Foreign Language</p>
         <div className="w-full  overflow-x-scroll ">
         {/* <div className="flex gap-5  mx-auto w-min">
@@ -54,12 +54,10 @@ export default function NewCareers() {
                 <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></div>
         </div> */}
 
-<div className="py-10  flex justify-center items-center text-left">
+<div className=" flex justify-center items-center text-left">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
         {languages.map((lang, i) => (
-          <div>
-          <ScrollAnimation animateIn="flipInX" duration={2000}>
-          <div key={i} className="flex items-center p-4 bg-white shadow-lg rounded-lg relative group">
+          <div key={i} className="flex items-center p-4 bg-white rounded-lg relative group scale-100 hover:scale-105 transition-all " >
                  <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-[opacity] duration-300 w-full h-full bg-[#2c496499]  flex space-x-4 z-2 text-white flex-col gap-2 justify-center items-center " >
                  <Link to={`/learn/${lang.name}`}  className='px-4 py-2 rounded-md  border-2 border-white text-white font-semibold h-min w-max '>Read More</Link>
                         </div>
@@ -70,8 +68,6 @@ export default function NewCareers() {
               <h2 className="text-lg font-semibold">{lang.title}</h2>
               <p className=' line-clamp-2'>{lang.description}</p>
             </div>
-          </div>
-          </ScrollAnimation>
           </div>
         ))}
       </div>

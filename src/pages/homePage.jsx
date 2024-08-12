@@ -32,7 +32,7 @@ function HomePage() {
     <Navbar isScrolled={isScrolled}/>
     <Toaster position='top-center' reverseOrder={false}/>
     <MainSection/>
-    <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
+    <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-12 '>
     <HomeDetails/>
     <NewCareers/>
     <Training/>

@@ -3,7 +3,7 @@ import { AiFillMessage } from 'react-icons/ai';
 import { IoMdClose } from 'react-icons/io';
 import { MdMenuOpen } from 'react-icons/md';
 import JoinConsultation from './homesections/JoinConsultation';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Menu from '@mui/joy/Menu';
 import MenuButton from '@mui/joy/MenuButton';
 import MenuItem from '@mui/joy/MenuItem';
@@ -13,9 +13,16 @@ import { scrollWithOffset } from './ProviderFunctions';
 export default function Navbar({isScrolled=true}) {
   
   const [isOpen,setisOpen] = useState(false);
+  const [dropDWN,setdropDWN] = useState(null);
   const navlinks = ['Home','Languages Courses','About Us','Contact Us'];
   const navigate = useNavigate();
-
+  const location = useLocation();
+  function handleopenDropdown(e){
+    setdropDWN(e.currentTarget);
+  }
+  function handlecloseDropdown(){
+    setdropDWN(null)
+  }
     function openSideBar(){
         setisOpen(!isOpen);
         document.body.style.height = '100vh';
@@ -29,7 +36,7 @@ export default function Navbar({isScrolled=true}) {
   return (
     <>
     <JoinConsultation/>
-    <div className={`w-[100vw] py-3 whitespace-nowrap  font-Poppins drop-nav-shadow sticky top-0 z-50  transition-colors duration-300 ${
+    <div className={`w-[100vw] py-3 whitespace-nowrap  font-RobotoSlab drop-nav-shadow sticky top-0 z-50  transition-colors duration-300 ${
         isScrolled ? "bg-[rgb(29,13,207)]" : "bg-[rgb(0,0,0)]"
       }` }>
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex justify-between">
@@ -57,23 +64,27 @@ export default function Navbar({isScrolled=true}) {
       </div>
       <div className=" md:block hidden my-auto text-sm">
       <ul className="flex  gap-7 text-white  font-semibold items-center">
-          <li className=' capitalize h-min' onClick={()=>navigate('/')}>Home</li>
-          <li><Dropdown>
-  <MenuButton className=' hover:text-black' sx={{border:'none',color:'white'}}>Languages Courses</MenuButton>
-  <Menu>
+          <li className={`capitalize h-min cursor-pointer hover:text-yellow-200 ${location.pathname === '/'?'text-yellow-600':''}`} onClick={()=>navigate('/')} >Home</li>
+          <li className='cursor-pointer hover:text-yellow-200' onMouseLeave={handlecloseDropdown}>
+            <Dropdown  >
+  <MenuButton className=' hover:text-black' sx={{border:'none',color:location.pathname.startsWith("/learn")?"#ca8a04":'white',background:'transparent' }} onMouseEnter={handleopenDropdown}  >Languages Courses</MenuButton>
+  <Menu anchorEl={dropDWN} open={Boolean(dropDWN)} onClose={handlecloseDropdown} >
     <MenuItem onClick={()=>navigate('/learn/dutch')}>Dutch</MenuItem>
     <MenuItem onClick={()=>navigate('/learn/spanish')}>Spanish</MenuItem>
     <MenuItem onClick={()=>navigate('/learn/english')}>English</MenuItem>
     <MenuItem onClick={()=>navigate('/learn/japanese')}>Japanese</MenuItem>
     <MenuItem onClick={()=>navigate('/learn/chinese')}>Chinese</MenuItem>
   </Menu>
-</Dropdown></li>
-<li className=' capitalize h-min' ><HashLink smooth  to="/#about" scroll={scrollWithOffset}>About Us</HashLink></li>
-<li className=' capitalize h-min'><HashLink smooth  to="/#contact" scroll={scrollWithOffset}>Contact Us</HashLink></li>
+  </Dropdown>
+
+
+</li>
+<li className=' capitalize h-min cursor-pointer hover:text-yellow-200' ><HashLink smooth  to="/#about" scroll={scrollWithOffset}>About Us</HashLink></li>
+<li className=' capitalize h-min cursor-pointer hover:text-yellow-200'><HashLink smooth  to="/#contact" scroll={scrollWithOffset}>Contact Us</HashLink></li>
         </ul>
       </div>
        <div className='hidden md:block my-auto w-max ml-auto text-right'> 
-       <button className='px-4 py-2 rounded-full bg-yellow-500 font-semibold h-min'>Apply Now</button>
+       <button className=' py-2.5 px-5  rounded-full bg-yellow-500 font-semibold h-min font-RobotoSlab text-sm'>Apply Now</button>
         </div>
         </div>
 
@@ -106,7 +117,7 @@ export default function Navbar({isScrolled=true}) {
           {navlinks.map((navlink) => {
           return <li className='py-4'>{navlink}</li>
           })}
-       <li className='px-4 py-2 rounded-md mx-4 bg-yellow-500 font-semibold h-min'>Apply Now</li>
+       <li className='px-4 py-2 rounded-md mx-4 bg-yellow-500 font-semibold h-min text-xs'>Apply Now</li>
         </ul>
       </div>
       </div>

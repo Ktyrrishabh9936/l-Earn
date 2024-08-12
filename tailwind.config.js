@@ -13,7 +13,10 @@ module.exports = {
       ChakraPetch:['Chakra Petch', 'sans-serif'],
       Lobster:['Lobster', 'sans-serif'],
       LobsterTwo:['Lobster Two', 'sans-serif'],
-      RobotoSlab:['Roboto Slab', 'sans-serif']
+      RobotoSlab:['Roboto Slab', 'sans-serif'],
+      Roboto:["Roboto", 'sans-serif'],
+      Oswald: ["Oswald", 'sans-serif'],
+      SourceCode: ["Source Code Pro", 'monospace']
     },
     extend: {},
   },

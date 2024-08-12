@@ -9,7 +9,7 @@ import { scrollWithOffset } from './ProviderFunctions';
 export default function Footer() {
   const navigate = useNavigate();
   return (
-    <footer className=' bg-black py-8  text-gray-500 '>
+    <footer className=' bg-black py-8  text-gray-500 font-Roboto '>
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row ">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
       <div className="flex items-center gap-1 " onClick={()=>navigate('/')}>
