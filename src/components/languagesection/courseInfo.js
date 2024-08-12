@@ -1,6 +1,9 @@
 import React from 'react';
+import { useScrollAnimation } from '../ProviderFunctions';
 
 const CourseInfo = ({language,elementRef}) => {
+  const controls = useScrollAnimation();
+
   return (
     <div className=" w-[92%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto font-Poppins">
       <div className="bg-white max-w-xl  mx-auto md:mx-0 w-full md:w-[40%]  rounded-lg  space-y-6" ref={elementRef}>

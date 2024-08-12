@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import { slideInLeftVariants, slideInRightVariants, useScrollAnimation } from './ProviderFunctions';
+import { motion } from 'framer-motion';
 const ContactForm = () => {
   const [ContactData,setContactData] = useState({firstName:'',lastName:"",email:"",message:""});
   const [processing,setProcessing] = useState(false);
+  const controls = useScrollAnimation();
     const handleChange=(e)=>{
       setContactData({...ContactData,[e.target.name]:e.target.value});
     }
@@ -35,8 +38,12 @@ const ContactForm = () => {
         <h2 className=" font-semibold mb-6 text-center px-6 text-[clamp(1.6rem,2.3vw,2.5rem)] font-Salsa">Let’s Get Connected</h2>
         <p className="mb-6 text-center text-xl px-6">If You Have Any Query, Please Contact Us</p>
       <div className=" p-8 rounded-lg  w-full flex flex-col-reverse lg:flex-row gap-8">
-
-        <form className='w-full lg:w-[60%] pb-8'>
+      <motion.form
+  className="scroll-animated w-full lg:w-[60%] pb-8"
+  initial="hidden"
+  animate={controls}
+  variants={slideInLeftVariants}
+>
           <div className="flex gap-6">
           <div className="mb-4 w-full">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first-name">
@@ -110,10 +117,15 @@ const ContactForm = () => {
             </button>
           </div>
 
-        </form>
-        <div className="flex justify-center items-center rounded-full w-full lg:w-[40%] px-6">
+        </motion.form>
+        <motion.div
+  className="scroll-animated flex justify-center items-center rounded-full w-full lg:w-[40%] px-6"
+  initial="hidden"
+  animate={controls}
+  variants={slideInRightVariants}
+>
           <img src="img/testimonials-3.jpg " className='rounded-full ' alt="" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

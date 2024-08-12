@@ -11,7 +11,6 @@ function LanguageDetails() {
   const elementRef = useRef(null);
   // State to store the height
   const [height, setHeight] = useState(0);
-
   useEffect(() => {
     // Set the height after the component mounts
     if (elementRef.current) {

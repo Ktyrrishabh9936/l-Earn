@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-export default function LanguagePage({language,height}) {
+import { useScrollAnimation } from '../ProviderFunctions';
+export default function LanguagePage({language,height,controls}) {
+  const controls = useScrollAnimation();
+
   const DynamicHeightDiv = styled.div`
   position:absolute;
   background-color: transparent;
