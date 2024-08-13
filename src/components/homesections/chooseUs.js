@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
         <div className="flex flex-col items-center gap-4 w-full">
           <h3 className="text-2xl font-bold mb-2 font-RobotoSlab">Personalized Learning</h3>
           <p className=" text-xl">Tailored courses to fit individual learning styles and goals.</p>
-          <div className="bg-yellow-500 rounded-lg h-24 w-44 mb-4 -rotate-12  relative top-8 "></div>
+          <div className="bg-yellow-500 rounded-lg h-24 w-44 mb-16 md:mb-4 -rotate-12  relative top-8 "></div>
         </div>
         <div className="flex flex-col items-center gap-4 relative w-full ">
         <img className=' rotate-180 h-[clamp(10rem,13vw,14rem)] hidden min-[431px]:block absolute top-28 sm:top-20 md:-top-2 xl:top-4 -left-3 md:-left-20 xl:-left-16 z-10' src='svg/arrow.svg'></img>

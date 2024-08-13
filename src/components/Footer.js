@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row ">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
       <div className="flex items-center gap-1 " onClick={()=>navigate('/')}>
-          <img src="/img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16'/>
+          <img src="/img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16 mx-auto md:mx-0'/>
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
                 <li className=""><BiLogoFacebook fontSize={30}/></li>

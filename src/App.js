@@ -8,7 +8,7 @@ import AnimatedText from './pages/animation';
 import { IoLogoWhatsapp } from 'react-icons/io';
 function App() {
   return (
-    <>
+    <div >
     <Router>
       <ScrollToTop/>
       <Routes>
@@ -17,8 +17,8 @@ function App() {
         <Route path='/animate' element={<AnimatedText/>}/>
       </Routes>
     </Router>
-    <div className="p-2 fixed bottom-6 right-6 border-2 rounded-full border-green-500 bg-white "><IoLogoWhatsapp className='text-green-500' style={{fontSize:'2rem'}}/></div>
-    </>
+    <a href={`whatsapp:contact=8920743393@s.whatsapp.com&message="Hello Learn Academy,I'd like to chat with you"`} className="p-2 fixed z-30 bottom-6 right-6 border-2 rounded-full border-green-500 bg-white "><IoLogoWhatsapp className='text-green-500' style={{fontSize:'2rem'}}/></a>
+    </div>
   );
 }
 

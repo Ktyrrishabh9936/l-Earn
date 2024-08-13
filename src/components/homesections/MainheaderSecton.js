@@ -1,7 +1,7 @@
 import React from 'react'
 import { PiTranslateBold } from 'react-icons/pi';
 import { motion } from "framer-motion";
-import { textVariants } from './ProviderFunctions';
+import { textVariants } from '../ProviderFunctions';
 export default function MainSection() {
   
   return (
