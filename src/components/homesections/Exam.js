@@ -17,18 +17,18 @@ export default function Training() {
         <div className=" flex">
                 <div className="w-[50%]">
                         <ul className=' list-none space-y-20'>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[60%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdiY57vdT8nZgKITRkhP5uMnq-fNle33aA&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[13%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[13%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdiY57vdT8nZgKITRkhP5uMnq-fNle33aA&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[60%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[60%] '><img className='rounded-lg' src="/img/Rectangle_12.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[13%] '><img className='rounded-lg' src="/img/Rectangle_13.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[13%] '><img className='rounded-lg' src="/img/Rectangle_14.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[60%] '><img className='rounded-lg' src="/img/Rectangle_15.png" alt="" /></li>
                         </ul>
                 </div>
                 <div className="w-[50%]">
                 <ul className=' list-none space-y-20'>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[10%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg  relative left-[55%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[55%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></li>
-                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[10%] '><img className='rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdiY57vdT8nZgKITRkhP5uMnq-fNle33aA&s" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[10%] '><img className='rounded-lg' src="/img/Rectangle_16.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg  relative left-[55%] '><img className='rounded-lg' src="/img/Rectangle_17.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[55%] '><img className='rounded-lg' src="/img/Rectangle_18.png" alt="" /></li>
+                                <li className='w-[clamp(4rem,5vw,5rem)] floating rounded-lg relative left-[10%] '><img className='rounded-lg' src="/img/Rectangle_19.png" alt="" /></li>
                         </ul>
                 </div>
         </div>

@@ -2,12 +2,9 @@ import Footer from '../components/Footer';
 import Navbar from '../components/navigation';
 import LanguagePage from '../components/languagesection/languagePage';
 import CourseInfo from '../components/languagesection/courseInfo';
-import { useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
-function LanguageDetails() {
-  const params = useParams();
-  const lang = params.lang;
+function LanguageDetails({lang}) {
   const elementRef = useRef(null);
   // State to store the height
   const [height, setHeight] = useState(0);

@@ -4,7 +4,6 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ScrollToTop from './components/scrolltotop';
 import HomePage from './pages/homePage';
 import LanguageDetails from './pages/languages';
-import AnimatedText from './pages/animation';
 import { IoLogoWhatsapp } from 'react-icons/io';
 function App() {
   return (
@@ -13,8 +12,11 @@ function App() {
       <ScrollToTop/>
       <Routes>
         <Route exact path='/' element={<HomePage/>}/>
-        <Route path='/learn/:lang' element={<LanguageDetails/>}/>
-        <Route path='/animate' element={<AnimatedText/>}/>
+        <Route path='/learn/dutch' element={<LanguageDetails lang='dutch'/>}/>
+        <Route path='/learn/spanish' element={<LanguageDetails lang='spanish'/>}/>
+        <Route path='/learn/english' element={<LanguageDetails lang='english'/>}/>
+        <Route path='/learn/japanese' element={<LanguageDetails lang='japanese'/>}/>
+        <Route path='/learn/chinese' element={<LanguageDetails lang='chinese'/>}/>
       </Routes>
     </Router>
     <a href={`https://wa.me/918920743393?text=${encodeURIComponent("Hello Learn Academy Team, I'd like to chat with you")}`} className="p-2 fixed z-30 bottom-6 right-6 border-2 rounded-full border-green-500 bg-white "><IoLogoWhatsapp className='text-green-500' style={{fontSize:'2rem'}}/></a>

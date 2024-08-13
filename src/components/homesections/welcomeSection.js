@@ -13,6 +13,8 @@ export default function HomeDetails() {
 >
       <section className="container px-4 font-Roboto" id='about' >
         <div className="w-full space-y-6  xl:w-[70%] mx-auto my-5 font-Oswald">
+          
+        <motion.img variants={textVariants} src='/img/Website_Header_Image.avif'></motion.img>
         <motion.h1 variants={textVariants}><h3 className='  text-[clamp(1.6rem,2.3vw,2.5rem)] font-semibold font-RobotoSlab  '>Welcome to L-Earn Academy, Where Language Learning Meets Excellence!</h3></motion.h1>
         <motion.p variants={textVariants}> <p className='text-xl  font-Roboto'>At L-Earn Academy, we believe that mastering a new language opens doors to a world of opportunities. Learning a new language is more than just mastering grammar and vocabulary, it's about opening doors to new cultures and connections.</p></motion.p>
         <motion.div variants={textVariants}> <div className=" relative ">
