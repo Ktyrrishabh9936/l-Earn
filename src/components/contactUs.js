@@ -106,7 +106,7 @@ const ContactForm = () => {
             
             <button
             type='submit'
-              className="bg-yellow-500 hover:bg-yellow-600  font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-xl relative flex justify-center "
+              className="bg-yellow-500 hover:bg-yellow-600  font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-xl relative flex justify-center mx-auto "
               onClick={handleSubmitContactForm}
             >
              {processing?<span className=' text-white'>Processing</span>:<span className=' pl-2 h-min my-auto '>Submit</span>}
@@ -119,12 +119,12 @@ const ContactForm = () => {
 
         </motion.form>
         <motion.div
-  className="scroll-animated flex justify-center items-center rounded-full w-full lg:w-[40%] px-6"
+  className="scroll-animated flex justify-center items-center rounded-full w-full lg:w-[40%] pr-6 lg:px-6"
   initial="hidden"
   animate={controls}
   variants={slideInRightVariants}
 >
-          <img src="img/testimonials-3.jpg " className='rounded-full ' alt="" />
+          <img src="/img/LAcademylogoDark.svg" className='w-1/2 lg:w-full'  alt="" />
         </motion.div>
       </div>
     </div>

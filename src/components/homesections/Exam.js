@@ -1,8 +1,6 @@
 import React from 'react'
-import colors from 'tailwindcss/colors'
 
 export default function Training() {
-        const theme = 'blue';
   return (
     
       <section className="container space-y-6  ">

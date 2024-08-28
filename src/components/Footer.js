@@ -10,30 +10,23 @@ export default function Footer() {
   const navigate = useNavigate();
   return (
     <footer className=' bg-black py-8  text-gray-500 font-Roboto '>
-      <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row ">
+      <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row gap-y-8">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
-      <div className="flex items-center gap-1 " onClick={()=>navigate('/')}>
+      <div className="flex items-center gap-1  pr-3" onClick={()=>navigate('/')}>
           <img src="/img/LearnAcademy-logo.png" alt="" className=' h-12 md:h-16 mx-auto md:mx-0'/>
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
-                <li className=""><BiLogoFacebook fontSize={30}/></li>
-                <li className=""><FaLinkedinIn fontSize={30}/></li>
-                <li className=""><FaYoutube fontSize={30}/></li>
-                <li className=""><FaInstagram fontSize={30}/></li>
+          <li><span className=' text-lg text-slate-400 whitespace-nowrap my-auto'>Follow Us On </span></li>
+                <li className="text-gray-400 hover:text-yellow-200 cursor-pointer "><a  href="https://www.instagram.com/learnacademy2024/"><FaInstagram fontSize={30}/></a></li>
         </ul>
       </div>
-      <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-between py-5">
+      <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-end py-5">
       <ul className=' list-none flex flex-col gap-4'>
-      <Link to="/"><li className=' font-bold'>Home</li></Link>
-      <HashLink smooth  to="/#about" scroll={scrollWithOffset}><li>About Us </li></HashLink>
-                <li>Gallary</li>
-                <HashLink smooth  to="/#testimonials"> <li>Testimonials</li></HashLink>
-        </ul>
-      <ul className=' list-none flex flex-col gap-4'>
-                <li className=' font-bold'>Legal</li>
-                <li>Terms & Conditions </li>
-                <li>Privacy Policy </li>
-                <li>Legal Policy</li>
+                <li  className=' font-bold text-slate-400 text-lg'>L-Earn Academy Links</li>
+                <li className=' cursor-pointer hover:text-yellow-500'><Link to="/">Home</Link></li>
+                <li className=' cursor-pointer hover:text-yellow-500'><Link to="/about">About us page</Link></li>
+                <li className=' cursor-pointer hover:text-yellow-500'><Link to="/ourPolicy">Privacy Policy </Link></li>
+                <li className=' cursor-pointer hover:text-yellow-500'>T&C</li>
         </ul>
         </div>
       </div>

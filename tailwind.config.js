@@ -18,7 +18,12 @@ module.exports = {
       Oswald: ["Oswald", 'sans-serif'],
       SourceCode: ["Source Code Pro", 'monospace']
     },
-    extend: {},
+    
+    extend: {
+      fontSize:{
+        'clamp-h2':"clamp(1.6rem,2vw,2.5rem)",
+      }
+    },
   },
   plugins: [],
 }

@@ -31,7 +31,13 @@ export default function NewCareers() {
             name:'chinese',
             imagename:'chineese.svg',
             title:"Chinese (China)",
-            description:"Japanese is the principal language of the Japonic language family spoken by the Japanese people. It has around 120 million speakers, primarily in Japan, .",
+            description:"Chinese is a group of languages spoken by the Han Chinese majority and many minority ethnic groups in China, and is part of the Sino-Tibetan language family",
+          },
+          {
+            name:'french',
+            imagename:'french.svg',
+            title:"French (France)",
+            description:"French, often referred to as the language of love, is spoken by over 275 million people worldwide across five continents.",
           },
         ]
   return (

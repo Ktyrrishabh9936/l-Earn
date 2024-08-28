@@ -33,7 +33,7 @@ function HomePage() {
     <div className="overflow-x-hidden">
     <Toaster position='top-center' reverseOrder={false}/>
     <MainSection/>
-    <div className=' bg-white relative -top-16  rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-12 '>
+    <div className=' bg-white relative -top-16  rounded-3xl md:rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-12 '>
     <HomeDetails/>
     <NewCareers/>
     <Training/>
