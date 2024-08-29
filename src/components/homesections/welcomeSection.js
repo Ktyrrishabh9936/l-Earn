@@ -1,7 +1,7 @@
 import React from 'react'
 import { staggerContainer, textVariants, useScrollAnimation } from '../ProviderFunctions'
 import { motion } from 'framer-motion'
-export default function HomeDetails() {
+export default function HomeDetails({openModal}) {
   const controls = useScrollAnimation();
   
   return (
@@ -20,7 +20,7 @@ export default function HomeDetails() {
         <motion.p variants={textVariants}> <p className='text-xl  font-Roboto'>Our mission is to provide high-quality language education that empowers students to communicate confidently and effectively in a globalised world. We foster a dynamic learning environment where students of all ages and backgrounds can thrive. Our passionate educators combine traditional and innovative teaching methods, prioritising student-centred learning and cultural immersion. We are committed to making language education accessible, engaging, and effective for everyone.</p></motion.p>
         <motion.div variants={textVariants}> <div className=" relative ">
         <p className='absolute left-[50%] -bottom-9 '><img src="svg/ApplyArrow.svg" alt="" /></p>
-        <button className=' text-white  py-2.5 px-5 text-sm font-RobotoSlab hover: rounded-full whitespace-nowrap '  style={{backgroundColor:'rgba(29,13,207,1)'}} > Apply Now </button>
+        <button className=' relative z-10 text-white  py-2.5 px-5 text-sm font-RobotoSlab hover: rounded-full whitespace-nowrap '  style={{backgroundColor:'rgba(29,13,207,1)'}} onClick={openModal} > Apply Now </button>
         </div> 
         </motion.div>
         </div>

@@ -9,7 +9,8 @@ import Navbar from '../components/navigation';
 import Testimonials from '../components/homesections/testimonials';
 import { Toaster } from 'react-hot-toast';
 import React, {  useEffect, useState } from 'react'
-function HomePage() {
+
+function HomePage({openModal}) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,16 +30,16 @@ function HomePage() {
   return (
     <>
     
-    <Navbar isScrolled={isScrolled}/>
+    <Navbar isScrolled={isScrolled} openModal={openModal}/>
     <div className="overflow-x-hidden">
     <Toaster position='top-center' reverseOrder={false}/>
     <MainSection/>
     <div className=' bg-white relative -top-16  rounded-3xl md:rounded-[4rem] text-center text-black pt-10 flex flex-col justify-center items-center space-y-12 '>
-    <HomeDetails/>
+    <HomeDetails openModal={openModal}/>
     <NewCareers/>
     <Training/>
     </div>
-    <WhyChooseUs/>
+    <WhyChooseUs openModal={openModal}/>
     <Testimonials/>
     <div className=' bg-white relative -top-16  rounded-[4rem]  text-black pt-10 flex flex-col justify-center items-center space-y-20 '>
     <ContactForm/></div>

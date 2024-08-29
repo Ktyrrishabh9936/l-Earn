@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUsContent = () => {
   return (
-    <section className="container mx-auto px-6 sm:px-10 font-Roboto  text-[clamp(1.1rem,1.4vw,1.6rem)]">
+    <section className="w-full md:w-[80%] lg:w-[70%] mx-auto px-6 sm:px-10 font-Roboto  text-[clamp(1.1rem,1.4vw,1.6rem)]">
         <div className="mb-8">
         <p className=' mb-4'>Welcome to L-Earn Academy, where language learning meets excellence and innovation. At L-Earn Academy, we believe that mastering a new language is more than just acquiring vocabulary and grammar—it's about embracing new cultures, building global connections, and unlocking a world of opportunities. Our mission is to provide high-quality language education that empowers students to communicate confidently and effectively in today’s globalized world.</p>
         </div>

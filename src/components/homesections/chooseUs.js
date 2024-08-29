@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({openModal}) => {
   return (
     <div className=" text-white py-16 px-8 font-Roboto " style={{backgroundColor:'rgba(29,13,207,1)'}}>
       <div className="container mx-auto">
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <div className="flex justify-center mt-12">
-        <button className="bg-white text-blue-900 font-bold py-2.5 px-5 text-sm font-RobotoSlab rounded-full">Apply Now</button>
+        <button className="bg-white text-blue-900 font-bold py-2.5 px-5 text-sm font-RobotoSlab rounded-full" onClick={openModal}>Apply Now</button>
       </div>
     </div>
     </div>

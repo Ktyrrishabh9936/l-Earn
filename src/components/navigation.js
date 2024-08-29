@@ -10,7 +10,8 @@ import MenuItem from '@mui/joy/MenuItem';
 import Dropdown from '@mui/joy/Dropdown';
 import { HashLink } from 'react-router-hash-link';
 import { scrollWithOffset } from './ProviderFunctions';
-export default function Navbar({isScrolled=true}) {
+import { Link } from 'react-router-dom';
+export default function Navbar({isScrolled=true,openModal}) {
   
   const [isOpen,setisOpen] = useState(false);
   const [dropDWN,setdropDWN] = useState(null);
@@ -71,17 +72,18 @@ export default function Navbar({isScrolled=true}) {
     <MenuItem style={{color:location.pathname === '/learn/english'?'#1d0dcf':'  #1f2937'}} onClick={()=>{navigate('/learn/english');closeSideBar();handlecloseDropdown();}}>English</MenuItem>
     <MenuItem style={{color:location.pathname === '/learn/japanese'?'#1d0dcf':'  #1f2937'}} onClick={()=>{navigate('/learn/japanese');closeSideBar();handlecloseDropdown();}}>Japanese</MenuItem>
     <MenuItem style={{color:location.pathname === '/learn/chinese'?'#1d0dcf':'  #1f2937'}} onClick={()=>{navigate('/learn/chinese');closeSideBar();handlecloseDropdown();}}>Chinese</MenuItem>
+    <MenuItem style={{color:location.pathname === '/learn/chinese'?'#1d0dcf':'  #1f2937'}} onClick={()=>{navigate('/learn/french');closeSideBar();handlecloseDropdown();}}>French</MenuItem>
   </Menu>
   </Dropdown>
 
 
 </li>
-<li className=' capitalize h-min cursor-pointer hover:text-yellow-200' onClick={()=>closeSideBar()}><HashLink smooth  to="/#about" scroll={scrollWithOffset}>About Us</HashLink></li>
+<li className=' capitalize h-min cursor-pointer hover:text-yellow-200' onClick={()=>closeSideBar()}><Link to="/about" >About Us</Link></li>
 <li className=' capitalize h-min cursor-pointer hover:text-yellow-200'><HashLink smooth  to="/#contact" scroll={scrollWithOffset} onClick={()=>closeSideBar()}>Contact Us</HashLink></li>
         </ul>
       </div>
        <div className=' my-0 md:my-auto mx-auto md:mx-0 w-max ml-auto text-right'> 
-       <button className=' py-2.5 px-5  rounded-full bg-yellow-500 font-semibold h-min font-RobotoSlab text-sm' onClick={()=>closeSideBar()}>Apply Now</button>
+       <button className=' py-2.5 px-5  rounded-full bg-yellow-500 font-semibold h-min font-RobotoSlab text-sm' onClick={openModal}>Apply Now</button>
         </div>
         </div>
         </div>

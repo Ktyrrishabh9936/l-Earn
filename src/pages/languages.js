@@ -4,7 +4,7 @@ import LanguagePage from '../components/languagesection/languagePage';
 import CourseInfo from '../components/languagesection/courseInfo';
 import { useEffect, useRef, useState } from 'react';
 
-function LanguageDetails({lang}) {
+function LanguageDetails({lang,openModal}) {
   const elementRef = useRef(null);
   // State to store the height
   const [height, setHeight] = useState(0);
@@ -16,7 +16,7 @@ function LanguageDetails({lang}) {
   }, []);
   return (
     <>
-    <Navbar />
+    <Navbar openModal={openModal}/>
     <LanguagePage language={lang} height={height}/>
     <div className=' bg-white relative -top-16  rounded-[4rem]  text-black pt-14  space-y-20 '>
       <CourseInfo language={lang} elementRef={elementRef}/>
