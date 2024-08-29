@@ -30,6 +30,10 @@ export default function Footer() {
         </ul>
         </div>
       </div>
+      <div className=" text-center text-sm">
+        <p>All Rights Reserved Ⓡ L-Earn Academy.</p>
+        <p>Maintained and Developed by <a className=' hover:underline hover:text-slate-200' href="https://www.arevei.com">www.arevei.com</a></p>
+        </div>
     </footer>
   )
 }

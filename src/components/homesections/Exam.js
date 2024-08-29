@@ -40,9 +40,9 @@ export default function Training() {
                         </ul>
                 </div>
         </div> */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-col-4 w-max mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 px-3  mx-auto">
         {exam.map((exam)=>{
-                return <div className=" rounded-lg overflow-hidden  bg-white ">
+                return <div className=" rounded-lg   bg-white ">
                 <img
                   className="w-30 h-30 max-w-30 overflow-hidden  object-contain mx-auto"
                   src={exam.image}
